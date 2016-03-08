@@ -1,0 +1,16 @@
+<div>
+
+    <div class="animate-ref" ng-repeat="n in navi" ng-click="openUrl(n.url,n.id)" ng-animate-ref="{{n.id}}">
+        {{n.name}}
+    </div>
+
+    <div class="sideslide" ng-class="{open:toggle}">
+        <div class="sshandle" ng-click="toggle=!toggle">Toggle</div>
+        <div class="sscontent">
+            CONTENT
+            CONTENT
+            CONTENT
+            CONTENT
+        </div>
+    </div>
+</div>

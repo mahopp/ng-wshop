@@ -1,0 +1,17 @@
+<div >
+    <div class="header-ref animate-ref" ng-animate-ref="{{ navPage.id }}">{{navPage.name}}</div>
+
+    <h3>Wetter <span ng-bind="weather.name"></span></h3>
+
+    <table>
+        <tr>
+            <th ng-repeat="(key,value) in weather.main">{{key}}</th>
+        </tr>
+        <tr>
+            <td ng-repeat="(key,value) in weather.main"><span ng-bind="value"></span></td>
+        </tr>
+    </table>
+
+    <ng-map center="[{{weather.coord.lat}},{{weather.coord.lon}}]"></ng-map>
+
+</div>

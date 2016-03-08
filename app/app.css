@@ -1,0 +1,111 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+table {
+
+}
+
+table th,table td {
+  padding:5px;
+}
+
+table th {
+  background-color:#555;
+  color:white;
+}
+
+table td {
+  border:1px solid #ccc;
+
+}
+
+
+.animate-ref {
+  text-align: left;
+  display:block;
+  font-size:20px;
+}
+.header-ref {
+  color:white;
+  background:black;
+  font-size:100px;
+}
+.view-container {
+  position:relative;
+}
+.view-container > .view.ng-animate {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  min-height:500px;
+}
+.view.ng-enter, .view.ng-leave,
+.animate-ref.ng-anchor {
+  transition:.5s linear all;
+}
+.view.ng-enter {
+  transform:translateX(100%);
+}
+.view.ng-enter.ng-enter-active, .view.ng-leave {
+  transform:translateX(0%);
+}
+.view.ng-leave.ng-leave-active {
+  transform:translateX(-100%);
+}
+.animate-ref.ng-anchor-out {
+  background:red;
+}
+
+
+
+.sideslide {
+  height:200px;
+  width:200px;
+  position:absolute;
+  background-color: #ccc;
+  right:-8px;
+  transform:translateX(100%);
+  transition:transform linear 1s;
+}
+
+.sshandle {
+  width:auto;
+  position:absolute;
+  padding:5px;
+  background-color: #ccc;
+  transform:translateX(-100%);
+}
+
+.sideslide.open {
+  transform:translateX(0%);
+}
+
